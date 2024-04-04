@@ -1,3 +1,4 @@
+import 'package:blog_app/core/theme/theme.dart';
 import 'package:blog_app/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:blog_app/features/auth/presentation/pages/signup_page.dart';
 import 'package:blog_app/init_dependencies.dart';
@@ -22,8 +23,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: AppTheme.lightThemeMode,
+      darkTheme: AppTheme.darkThemeMode,
       home: SignUpPage(),
     );
   }
